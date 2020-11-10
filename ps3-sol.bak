@@ -1,0 +1,11 @@
+;1a;
+
+(define (harmonic n)
+  (cond
+    ((= n 1) 1)
+    (else (+ (/ 1.0 n) (harmonic (- n 1))))))
+
+;1b;
+
+(define (Eulerest n)
+  (abs (- (harmonic n) (log n))))

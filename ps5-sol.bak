@@ -1,0 +1,4 @@
+;1a;
+
+(define (encode p)
+  (let ((x (car p)) (y (cdr p))

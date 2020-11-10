@@ -1,0 +1,4 @@
+;1;
+
+(define (harmonic n)
+  (sum (lambda (x) (/ 1 (+ x 1))) (- n 1)))
