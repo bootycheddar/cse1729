@@ -1,0 +1,12 @@
+(define (make-tree value left right)
+  (list value left right))
+
+(define (value T) (car T))
+(define (right T) (caddr T))
+(define (left T) (cadr T))
+
+;1;
+
+(define (tree-size T)
+  (if (null? T) 0
+      (+ 1 (tree-size left) (tree-size right))))

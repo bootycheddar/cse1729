@@ -1,0 +1,6 @@
+;1;
+
+(define (square-pair n)
+  (cons n (lambda (n) (* n n))))
+
+(square-pair 3)

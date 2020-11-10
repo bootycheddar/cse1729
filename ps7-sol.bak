@@ -1,0 +1,7 @@
+;1;
+
+(define (ins x l)
+  (cond
+    ((null? l) (list x))
+    ((<= x (car l)) (cons x l))
+    (else (cons (car l) (ins x (cdr l))))))

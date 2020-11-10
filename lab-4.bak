@@ -1,0 +1,10 @@
+;1;
+
+(define (windchill W F)
+  (let ((sqrtW (sqrt W))
+        sqrtW)))
+  (-
+   (+ 1.05 (* 0.93 F))
+   (+ (* 3.65 W) (* 3.62
+
+                    (windchill 4 4)

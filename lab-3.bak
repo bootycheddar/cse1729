@@ -1,0 +1,18 @@
+;1a;
+(define (pell n)
+  (cond ((= n 0) 0)
+        ((= n 1) 1)
+        ((> n 1) (+ (* 2 (pell (- n 1))) (pell (- n 2))))))
+
+;1b;
+(define x 2)
+(define (find-pell n)
+  (helper n x))
+
+(define (helper n x)
+  (cond ((= n 0) 0)
+        ((= n 1) 0)
+        ((<= n (pell x)) (pell (- x 1)))
+        (else (helper n (+ x 1)))))
+
+(find-pell 50)

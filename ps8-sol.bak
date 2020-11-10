@@ -1,0 +1,16 @@
+;1;
+
+(define (arithvalue T)
+  (cond
+    ((eq? (value T) #\+) (+ (arithvalue (left T)) (arithvalue (right T))))
+    ((eq? (value T) #\*) (* (arithvalue (left T)) (arithvalue (right T))))
+    ((eq? (value T) #\-) (- (arithvalue (left T))))
+    ((eq? (value T) #\/) (/ 1 (arithvalue (left T))))
+    (else (value T))))
+
+(define example (list #\+ (list #\*
+                                (list 4 '() '())
+                                (list 5 '() '()))
+                      (list #\+
+                            (list #\/ (list 6 '() '()) '())
+                            (list 7 '() '()))))

@@ -1,0 +1,9 @@
+;1;
+
+(define (change k l)
+  (cond
+    ((< k 0) 0)
+    ((= k 0) 1)
+    ((null? l) 0)
+    (else (+ (change k (cdr l))
+             (change (- k (car l)) l)))))

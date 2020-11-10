@@ -1,0 +1,14 @@
+(define (create-heap value left right)
+  (list value left right))
+(define (heap-root H) (car H))
+(define (left T) (cadr T))
+(define (right T) (caddr T))
+
+;1a;
+
+(define (heap-insert f x H)
+  (let ((y (car H)))
+  (cond
+    ((null? H) (create-heap x '() '()))
+    ((f x y) (create-heap x (right H) (heap-insert f y (left H))))
+    (else (create-heap y (right H) (heap-insert f x (left H)))))))

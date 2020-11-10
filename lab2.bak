@@ -1,0 +1,11 @@
+;1;
+(define (geom-series-np2 n)
+  (if (= n 0)
+      1
+      (+ (/ 1 (expt 2 n))
+         (/ 1 (expt 2 (+ n 1))))
+;2;
+(define (num-digits n)
+  (if (< n 10)
+      1
+      (+ 1 (num-digits (/ n 10)))))
